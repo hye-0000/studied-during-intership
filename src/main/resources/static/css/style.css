@@ -1,0 +1,16 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+body {margin: 0; height:2000px}
+h1 {margin: 0; padding-top: 40px; font-size: 50px; font-family: 'Jua';}
+h5{font-family: 'Jua'}
+p{font-weight: bold; font-size: 30px; margin-top: 10px;}
+img {padding-top: 40px; width: 500px; height: 150px;}
+
+.box {background:rgb(196, 151, 255); height:100vh; width:100vw;margin:0 auto; text-align: center; opacity: 70%}
+.box:nth-child(odd) {background:rgb(233, 156, 252);}
+.box:first-child {background:rgb(245, 192, 245);}
+
+.pagination {text-align:center;}
+.infinite {counter-reset: section;}
+.list {text-align:center;}

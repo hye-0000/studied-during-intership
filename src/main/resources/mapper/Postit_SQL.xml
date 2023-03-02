@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.neighbor21.HyeYoung.mapper.MapMapper">
+    <select id="getData" resultType="HashMap" parameterType="HashMap">
+    <!-- test_member와 test_member_detail 테이블을 활용하여 intern_yn 이 전달받은 데이터와 같은 
+        user_id, user_name 값을 조회하는 select 쿼리를 작성하세요.
+    -->
+        SELECT LNG, LAT
+        FROM test_bsta
+    </select>
+    <select id="getLineData" resultType="HashMap" parameterType="HashMap">
+    <!-- test_member와 test_member_detail 테이블을 활용하여 intern_yn 이 전달받은 데이터와 같은 
+        user_id, user_name 값을 조회하는 select 쿼리를 작성하세요.
+    -->
+        SELECT LNG, LAT
+        FROM test_link
+    </select>
+    <delete id="delData">
+    
+        DELETE FROM test_postit
+        WHERE user_id = 'kwon'
+    </delete>
+
+    <insert id="saveData" parameterType="java.util.List">
+
+        INSERT INTO test_postit (user_id, pi_id, pi_content) 
+        VALUES <foreach collection="list" item="item" separator=",">
+            (
+                'kwon', 
+                #{item.pi_id}, 
+                #{item.pi_content}
+            )
+        </foreach>;
+    </insert>
+
+    <insert id="savePath" parameterType="java.util.List">
+
+        INSERT INTO test_link (LAT, LAG) 
+        VALUES <foreach collection="list" item="mapitem" separator=",">
+            (
+                #{item.LAT}, 
+                #{item.LNG}
+            )
+        </foreach>;
+    </insert>
+
+
+    
+</mapper>

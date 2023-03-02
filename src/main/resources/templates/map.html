@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP</title>
+    <script type="module" th:src="@{js/map.js}"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=745bc59c9704d3105e9d4f5be9bfb93d&libraries=services,clusterer,drawing"></script>
+</head>
+<body>
+    <div id="map" style="width:100vw;height:40vh;"></div>
+
+    <!--지도 이동시키기-->
+    <!-- <p>
+        <button onclick="setCenter()">지도 중심좌표 이동시키기</button>
+        <button onclick="panTo()">지도 중심좌표 부드럽게 이동시키기</button>
+    </p> -->
+    
+    <!--지도 레벨 바꾸기-->
+    <!-- <p>
+        <button onclick="zoomIn()">지도레벨 - 1</button>
+        <button onclick="zoomOut()">지도레벨 + 1</button>
+    </p> -->
+    
+    <!--지도 정보 얻어오기-->
+    <!-- <p style="margin-top:-12px">
+        <em class="link">
+            <a href="/web/documentation/#MapTypeId" target="_blank">지도 타입을 보시려면 여기를 클릭하세요!</a>
+        </em>
+    </p> -->
+
+    <!--지도 이동 막기-->
+    <!-- <p>
+        <button onclick="setDraggable(false)">지도 드래그 이동 끄기</button>
+        <button onclick="setDraggable(true)">지도 드래그 이동 켜기</button>
+    </p> -->
+</body>    
+</html>
